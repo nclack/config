@@ -15,3 +15,8 @@ Put these in <My Documents>/WindowsPowerShell
 
 * [posh-git](https://github.com/dahlbyk/posh-git)
 
+## Setup
+
+1. new-item -type file -force $profile
+2. Copy files over and clone [posh-git].
+3. Set-ExecutionPolicy Unrestricted
