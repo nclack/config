@@ -1,0 +1,6 @@
+syntax on
+cs desert
+set backupdir=E:\vim\backups
+set dir=E:\vim\swap
+set so=999
+set nu
