@@ -1,6 +1,12 @@
 syntax on
-cs desert
+colorscheme desert
 set backupdir=E:\vim\backups
 set dir=E:\vim\swap
 set so=999
 set nu
+
+set ts=4
+set et
+set sw=4
+set softtabstop=4
+
