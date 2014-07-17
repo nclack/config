@@ -1,0 +1,13 @@
+{
+    "rulers": [78,80],
+    "draw_centered": true,
+    "indent_to_bracket": true,
+    "spell_check": false,
+    "highlight_line": true,
+    "draw_white_space": "all",
+    "translate_tabs_to_spaces": true,
+    "ignored_packages":
+    [
+        "vintage"
+    ]
+}
