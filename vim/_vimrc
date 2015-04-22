@@ -1,7 +1,11 @@
+set runtimepath^=C:\Users\Nathan\src\build-tools\vim\bundle\ctrlp.vim
+set runtimepath^=C:\Users\Nathan\src\build-tools\vim\bundle\nerdtree
+set runtimepath^=C:\Users\Nathan\src\build-tools\vim\bundle\win64\YouCompleteMe
+
 syntax on
 colorscheme desert
-set backupdir=E:\vim\backups
-set dir=E:\vim\swap
+set backupdir=C:\vim\backups
+set dir=C:\vim\swap
 set so=999
 set nu
 
@@ -10,3 +14,8 @@ set et
 set sw=4
 set softtabstop=4
 
+set hls
+set nowrap
+set ve=all
+
+set foldmethod=syntax

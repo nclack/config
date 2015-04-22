@@ -15,14 +15,17 @@ function prompt {
    $cdelim = [ConsoleColor]::DarkCyan 
    $chost = [ConsoleColor]::Green 
    $cloc = [ConsoleColor]::Cyan 
+   $cvs  = [ConsoleColor]::Yellow
 
    write-host "$([char]0x0A7) " -n -f $cloc 
    write-host ([net.dns]::GetHostName()) -n -f $chost 
    write-vcsstatus
 
-   write-host ' [' -n -f $cdelim 
-   write-host "VS"$env:visualstudioversion -n -f $cloc 
-   write-host ']' -n -f $cdelim 
+   if($env:visualstudioversion) {
+      write-host ' [' -n -f $cdelim 
+      write-host "VS"$env:visualstudioversion -n -f $cvs
+      write-host ']' -n -f $cdelim 
+   }
 
    write-host ' {' -n -f $cdelim 
    write-host (shorten-path (pwd).Path) -n -f $cloc 
