@@ -1,5 +1,5 @@
 function Get-Batchfile ($file) {
-    $cmd = "`"$file`" & set"
+    $cmd = "`"$file`" amd64 & set"
     cmd /c "$cmd" | Foreach-Object {
         $p, $v = $_.split('=')
         Set-Item -path env:$p -value $v
@@ -22,10 +22,9 @@ function VsVars32([int]$version = 10)
     $VsToolsDir = [System.IO.Path]::Combine($VsInstallPath, "VC")
     $BatchPath = join-path $VsToolsDir $batfilename
     
-    write-host $BatchPath
-
     Get-Batchfile( $BatchPath )
 
+    write-host (Get-Command cl).path
     write-host "All done"
 
     [System.Console]::Title = "PS MSVS" + $versionkey
